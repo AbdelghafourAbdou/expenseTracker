@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { GoSignOut } from "react-icons/go";
-import { LuMoonStar, LuSunMoon } from "react-icons/lu";
+import { FaMoon, FaSun, FaSignOutAlt } from "react-icons/fa";
 import './header.css'
 
 export default function Header() {
@@ -37,11 +36,11 @@ export default function Header() {
     return (
         <div className='headerContainer'>
             <button onClick={toggleTheme}>
-                {lightTheme ? <LuSunMoon /> : <LuMoonStar />}
+                {lightTheme ? <FaSun /> : <FaMoon />}
             </button>
             <h1>Expenses</h1>
             <button>
-                <GoSignOut />
+                <FaSignOutAlt />
             </button>
         </div>
     )
