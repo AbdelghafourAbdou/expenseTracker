@@ -1,0 +1,23 @@
+.navContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.addButton {
+    position: absolute;
+    top: 87vh;
+}
+
+.addForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+
+    position: absolute;
+    top: 40vh;
+}
+
+.addForm input {
+    border: none;
+}
