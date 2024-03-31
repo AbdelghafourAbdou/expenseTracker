@@ -48,3 +48,11 @@ button {
   background-color: #d2d1d1ae;
   color: #000000;
 }
+
+a:visited {
+  color: inherit;
+}
+
+a { 
+  text-decoration: none !important;
+}

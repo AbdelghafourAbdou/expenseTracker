@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { FaMoon, FaSun, FaSignOutAlt } from "react-icons/fa";
 import './header.css'
 
 export default function Header() {
-    const [lightTheme, setLightTheme] = useState(true);
+    let isDark;
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        isDark = true;
+    }
+    const [lightTheme, setLightTheme] = useState(!isDark);
 
     function toggleTheme() {
         setLightTheme(prevT => !prevT);
@@ -38,10 +43,14 @@ export default function Header() {
             <button onClick={toggleTheme}>
                 {lightTheme ? <FaSun /> : <FaMoon />}
             </button>
-            <h1>Expenses</h1>
-            <button>
-                <FaSignOutAlt />
-            </button>
+            <NavLink to='/'>
+                <h1>Expenses</h1>
+            </NavLink>
+            <NavLink to='/analyse'>
+                <button>
+                    <FaSignOutAlt />
+                </button>
+            </NavLink>
         </div>
     )
 }

@@ -1,0 +1,24 @@
+.analyticsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.highestPayment {
+    display: flex;
+    flex-direction: row;
+    min-width: 30vw;
+    justify-content: space-evenly;
+}
+
+.moneyContext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.money {
+    margin-block-start: auto;
+}
